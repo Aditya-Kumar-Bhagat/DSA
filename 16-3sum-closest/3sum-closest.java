@@ -12,18 +12,12 @@ class Solution {
 
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-
-                // Exact answer
                 if (sum == target) {
                     return sum;
                 }
-
-                // Update closest
                 if (Math.abs(sum - target) < Math.abs(closest - target)) {
                     closest = sum;
                 }
-
-                // Move pointers
                 if (sum < target) {
                     left++;
                 } else {
@@ -31,7 +25,6 @@ class Solution {
                 }
             }
         }
-
         return closest;
     }
 }

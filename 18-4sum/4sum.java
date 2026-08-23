@@ -30,8 +30,6 @@ class Solution {
                         result.add(Arrays.asList(
                             nums[i], nums[j], nums[left], nums[right]
                         ));
-
-                        // Skip duplicates
                         while (left < right && nums[left] == nums[left + 1])
                             left++;
 
